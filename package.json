@@ -13,12 +13,22 @@
   "description": "",
   "dependencies": {
     "@creit.tech/stellar-wallets-kit": "^1.7.3",
+    "@radix-ui/react-slot": "^1.1.2",
     "buffer": "^6.0.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.5.0",
+    "lucide-react": "^0.483.0",
     "next": "^15.2.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.0.2"
   },
   "devDependencies": {
-    "@types/react": "19.0.12"
+    "@types/react": "19.0.12",
+    "@types/tailwindcss": "^3.0.11",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.0.15"
   }
 }
