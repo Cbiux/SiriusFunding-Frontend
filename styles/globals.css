@@ -1,118 +1,33 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --primary: 130, 100%, 60%;
-  --primary-foreground: 0, 0%, 100%;
-  --background: 0, 0%, 0%;
-  --foreground: 0, 0%, 100%;
+/* Estilo base para botones */
+button.primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4a90e2; /* Color azul */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-body {
-  background-color: black;
-  color: white;
-  overflow-x: hidden;
+/* Hover y focus */
+button.primary:hover {
+  background-color: #357ab8; /* Azul más oscuro */
+  transform: scale(1.05); /* Efecto de agrandamiento */
 }
 
-/* Animated background with stars */
-.animated-background {
-  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-  background-size: 400% 400%;
-  animation: gradientAnimation 15s ease infinite;
-  z-index: -2;
+button.primary:focus {
+  outline: 2px solid #357ab8;
+  outline-offset: 2px;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Particles container */
-.particles-container {
-  z-index: -1;
-  overflow: hidden;
-}
-
-.particles-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 3px),
-    radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 2px),
-    radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 3px);
-  background-size: 550px 550px, 350px 350px, 250px 250px;
-  background-position: 0 0, 40px 60px, 130px 270px;
-  animation: starsAnimation 100s linear infinite;
-}
-
-@keyframes starsAnimation {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-2000px);
-  }
-}
-
-/* Animated title */
-.animated-title {
-  background: linear-gradient(to right, #ffffff, hsl(var(--primary)), #a855f7);
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textShine 5s linear infinite;
-}
-
-@keyframes textShine {
-  0% {
-    background-position: 0% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-
-/* Fade in animation */
-.fade-in {
-  animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Pulse animation */
-.pulse {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(130, 255, 153, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(130, 255, 153, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(130, 255, 153, 0);
-  }
+/* Botón deshabilitado */
+button.primary:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
 }

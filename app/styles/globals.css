@@ -1,0 +1,74 @@
+/* Reset de estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos globales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* Estilo base para botones */
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4a90e2; /* Color azul */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover y focus */
+button:hover {
+  background-color: #357ab8; /* Azul más oscuro */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+button:focus {
+  outline: 2px solid #357ab8;
+  outline-offset: 2px;
+}
+
+/* Botón deshabilitado */
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Variantes de botones */
+button.primary {
+  background-color: #4a90e2;
+}
+
+button.primary:hover {
+  background-color: #357ab8;
+}
+
+button.secondary {
+  background-color: #6c757d; /* Gris */
+}
+
+button.secondary:hover {
+  background-color: #5a6268; /* Gris más oscuro */
+}
