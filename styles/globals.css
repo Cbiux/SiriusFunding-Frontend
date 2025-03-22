@@ -1,0 +1,33 @@
+/* Estilo base para botones */
+button.primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4a90e2; /* Color azul */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover y focus */
+button.primary:hover {
+  background-color: #357ab8; /* Azul más oscuro */
+  transform: scale(1.05); /* Efecto de agrandamiento */
+}
+
+button.primary:focus {
+  outline: 2px solid #357ab8;
+  outline-offset: 2px;
+}
+
+/* Botón deshabilitado */
+button.primary:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
